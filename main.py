@@ -86,6 +86,7 @@ if (__name__ == "__main__"):
         elif (command.split()[0] == "piv"):
             id_mat = pivot_matrix(a)
             a = np.matmul(id_mat,a)
+            b = np.copy(a)
             nicePrint(a, description="A = ")
         elif (len(command.split()) == 3 and command.split()[0] == "mul"):
             row = int(command.split()[1]) - 1
